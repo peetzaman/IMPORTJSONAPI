@@ -18,14 +18,16 @@
  /**
  * Return data from a JSON API.
  *
- * @param {string} url The URL of the API endpoint.
- * @param {string} query The JSONPath query expression.
- * @param {string} columns A comma separated list of column path expressions.
- * @param {string} [param] An optional parameter.
+ * @param {string} url      The URL of the API endpoint.
+ * @param {string} query    The JSONPath query expression.
+ * @param {string} cols     A comma separated list of column path expressions.
+ * @param {string} [param]  An optional parameter.
+ * 
  * @return A two-dimensional array containing the data.
  * @customfunction
  */
-function IMPORTJSONAPI(url, query, cols) {
+function IMPORTJSONAPI(url, query, cols, [param]) {
+
   try {
     
     if (!(typeof url === "object" || typeof url === "string")) {
